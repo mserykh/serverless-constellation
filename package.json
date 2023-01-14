@@ -1,6 +1,7 @@
 {
   "name": "serverless-constellation",
   "version": "1.0.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": ""
@@ -14,6 +15,7 @@
     "lint": "eslint . --fix"
   },
   "devDependencies": {
+    "@types/node-fetch": "^2.6.2",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.17.0",
@@ -26,5 +28,7 @@
     "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
 }

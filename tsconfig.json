@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "CommonJS",
+    "target": "es2017",
+    "module": "esnext",
+    "moduleResolution": "nodenext",
     "rootDir": "./src",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./src",
     "strict": true,
-    "esModuleInterop": true,
-    "moduleResolution": "Node"
+    "esModuleInterop": true
   },
   "ts-node": {
     "esm": true
