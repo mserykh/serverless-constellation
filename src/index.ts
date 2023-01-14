@@ -1,4 +1,3 @@
-import fetchShows from './tvMazeClient/fetchShows.js';
+import syncShowsAsync from './syncService/syncShowsAsync.js';
 
-const shows = await fetchShows();
-console.log(shows);
+await syncShowsAsync();
