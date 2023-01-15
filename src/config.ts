@@ -9,5 +9,7 @@ const storageAccountName = process.env.STORAGE_ACCOUNT_NAME || '';
 const storageAccountKey = process.env.STORAGE_ACCOUNT_KEY || '';
 const storageAccountTableUrl = process.env.STORAGE_ACCOUNT_TABLE_URL;
 
-const config = { isDevelopment, storageAccountName, storageAccountKey, storageAccountTableUrl };
+const showsSyncRefreshPeriod = process.env.SHOWS_SYNC_REFRESH_PERIOD;
+
+const config = { isDevelopment, storageAccountName, storageAccountKey, storageAccountTableUrl, showsSyncRefreshPeriod };
 export default config;
