@@ -1,3 +1,5 @@
-import syncShowsAsync from './syncService/syncShowsAsync.js';
+// import doInitialShowsSyncAsync from './syncService/doInitialShowsSyncAsync.js';
+import syncShowUpdatesAsync from './syncService/syncShowUpdatesAsync.js';
 
-await syncShowsAsync();
+// await doInitialShowsSyncAsync();
+await syncShowUpdatesAsync();

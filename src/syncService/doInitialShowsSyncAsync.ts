@@ -5,8 +5,8 @@ import saveShowsAsync from '../tableStorageProvider/saveShowsAsync.js';
 import saveShowsSyncSuccessAsync from '../tableStorageProvider/saveShowsSyncSuccessAsync.js';
 import fetchShowsPageAsync from '../tvMazeClient/fetchShowsAsync.js';
 
-export default async function syncShowsAsync(startPageNumber = 1) {
-  console.log('Sync started');
+export default async function doInitialShowsSyncAsync(startPageNumber = 0) {
+  console.log('Shows sync started');
 
   const lastShowsSyncSuccess = await getShowsSyncSuccessAsync();
   if (lastShowsSyncSuccess?.timestamp) {
@@ -45,5 +45,5 @@ export default async function syncShowsAsync(startPageNumber = 1) {
     await saveShowsSyncSuccessAsync();
   }
 
-  console.log('Sync finished');
+  console.log('Shows sync finished');
 }

@@ -10,11 +10,19 @@ export default async function saveShowsAsync(shows: []) {
   const showsTableClient = buildTableClient('Shows');
 
   for (let show of shows) {
-    await saveShow(showsTableClient, show);
+    await saveShowToTableAsync(showsTableClient, show);
   }
 }
 
-async function saveShow(showsTableClient: TableClient, show: any) {
+export async function saveShowAsync(show: any): Promise<void> {
+  await ensureTableAsync('Shows');
+
+  const showsTableClient = buildTableClient('Shows');
+
+  await saveShowToTableAsync(showsTableClient, show);
+}
+
+async function saveShowToTableAsync(showsTableClient: TableClient, show: any) {
   console.log(`Saving show. ID: '${show.id}'`);
 
   const partitionKey = `${show.id}`;
