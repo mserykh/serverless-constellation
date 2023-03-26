@@ -41,7 +41,7 @@ export default async function doInitialShowsSyncAsync(startPageNumber = 0) {
     currentPageNumber++;
   }
 
-  if (startPageNumber === 1) {
+  if (startPageNumber === 0) {
     await saveShowsSyncSuccessAsync();
   }
 
